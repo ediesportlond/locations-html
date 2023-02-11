@@ -1,27 +1,27 @@
 <link rel="stylesheet" href="style.css">
+<div id="title-container">
+  <h1>Find a location near you</h1>
+</div>
 <div id="basilisk-container">
 
   <aside>
-    <div id="title-container">
-      <h1>Find a location near you</h1>
-    </div>
     <div id="store-select">
-      <select name="store">
+      <select name="store" id="store-dropdown">
 
         <option value="">Select Store</option>
 
         <optgroup label="Florida">
-          <option value="">Miami</option>
-          <option value="">Boca Raton</option>
+          <option value="123">Miami</option>
+          <option value="7035">Boca Raton</option>
         </optgroup>
         <optgroup label="Texas">
-          <option value="">Houston</option>
-          <option value="">San Antonio</option>
+          <option value="123t">Houston</option>
+          <option value="42">San Antonio</option>
         </optgroup>
 
       </select>
 
-      <button>Find</button>
+      <button onclick="dropdownSelect()">Find</button>
     </div>
 
     <div class="locations-container">
@@ -29,48 +29,44 @@
       <div>
         <h2>Florida</h2>
         <div class="location-block">
-          <h3>Boca Raton, FL</h3>
-          <a href="">
+          <h3 onclick="changeIframe('7035')">Boca Raton, FL</h3>
+          <p onclick="changeIframe('7035')">
             7035 Beracasa Way #207
             <br />
             Boca Raton, FL 33433
-          </a>
-          <br />
-          <a href="">561-564-0075</a>
+          </p>
+          <a href="tel:+15615640075">561-564-0075</a>
         </div>
 
         <div class="location-block">
-          <h3>Miami, FL</h3>
-          <a href="">
+          <h3 onclick="changeIframe('123')">Miami, FL</h3>
+          <p onclick="changeIframe('123')">
             123 Main St
             <br />
             Miami, FL 33166
-          </a>
-          <br />
-          <a href="">786-555-0100</a>
+          </p>
+          <a href="tel:+17865550100">786-555-0100</a>
         </div>
 
         <h2>Texas</h2>
 
         <div class="location-block">
-          <h3>Houston, TX</h3>
-          <a href="">
+          <h3 onclick="changeIframe('123t')">Houston, TX</h3>
+          <p onclick="changeIframe('123t')">
             123 Evergreen Terrace
             <br />
             Houston, TX 77001
-          </a>
-          <br />
+          </p>
           <a href="">786-555-0100</a>
         </div>
 
         <div class="location-block">
-          <h3>San Antonio, TX</h3>
-          <a href="">
+          <h3 onclick="changeIframe('42')">San Antonio, TX</h3>
+          <p onclick="changeIframe('42')">
             42 Wallaby Way
             <br />
             San Antonio, TX 78015
-          </a>
-          <br />
+          </p>
           <a href="">786-555-0100</a>
         </div>
 
@@ -81,10 +77,14 @@
   </aside>
 
   <div id="iframe-container">
+
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.2405090444017!2d-80.15756308527827!3d26.35108189038565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d91db73d924d63%3A0xf18309289c6f96d7!2sBoca%20Code!5e0!3m2!1sen!2sus!4v1675909900944!5m2!1sen!2sus"
       width="2000" height="1500" style="border:0;" allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </div>
+  
+    </div>
 
 </div>
+
+<script src="app.js"></script>
